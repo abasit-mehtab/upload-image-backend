@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.post("/upload", uploader.single("file"), async (req, res) => {
+app.post("/upload", uploader.single("image"), async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({
